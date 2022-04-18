@@ -18,7 +18,9 @@ export function start() {
     server.head('/hello/:name', respond);
 
     server.use(cors({
-        origin: "*"
+        origin: "*",
+        methods: ['GET,PUT,POST,DELETE'],
+        allowedHeaders: ['Content-Type', 'api_key', 'Authorization']
     }));
 
     server.listen(8080, function() {
