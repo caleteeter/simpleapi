@@ -4,7 +4,7 @@ function respond(req: Request, res: Response, next: Next) {
     if (req.params.name) {
         res.send('hello ' + req.params.name);
     } else {
-        res.send('hello there');
+        res.send({"id": "hello there"});
     }
     next();
 }
