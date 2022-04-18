@@ -1,0 +1,78 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Simple API",
+    "version": "0.1",
+    "title": "defaultTitle"
+  },
+  "host": "ctcon.eastus.cloudapp.azure.com:8080",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/hello": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Definition generated from Swagger Inspector",
+            "schema": {
+              "$ref": "#/definitions/Model0"
+            }
+          }
+        },
+        "summary": "Returns hello from simple api",
+        "description": "Returns hello from simple api",
+        "operationId": "hello"
+      }
+    },
+    "/hello/{name}": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "Name to return",
+            "required": true,
+            "type": "string",
+            "format": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Definition generated from Swagger Inspector",
+            "schema": {
+              "$ref": "#/definitions/Model0"
+            }
+          }
+        },
+        "summary": "Returns hello with parameter",
+        "description": "Returns hello with parameter",
+        "operationId": "helloparam"
+      }
+    }
+  },
+  "definitions": {
+    "Model0": {
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {},
+  "security": [],
+  "tags": []
+}

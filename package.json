@@ -4,11 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "cors": "^2.8.5",
     "restify": "^8.6.1"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.12",
     "@types/restify": "^8.5.4"
   }
 }

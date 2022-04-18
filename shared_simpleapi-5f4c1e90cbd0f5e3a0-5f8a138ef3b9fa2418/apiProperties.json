@@ -1,0 +1,36 @@
+{
+  "properties": {
+    "connectionParameters": {
+      "RPCEndpoint": {
+        "type": "securestring",
+        "uiDefinition": {
+          "displayName": "Ethereum RPC Endpoint",
+          "description": "Ethereum RPC Endpoint",
+          "tooltip": "Provide Your Ethereum RPC Endpoint",
+          "constraints": {
+            "required": "true",
+            "tabIndex": 1
+          }
+        }
+      }
+    },
+    "iconBrandColor": "#007ee5",
+    "capabilities": [],
+    "policyTemplateInstances": [
+      {
+        "templateId": "setheader",
+        "title": "Enforce rpc url",
+        "parameters": {
+          "x-ms-apimTemplateParameter.name": "RPC-Endpoint",
+          "x-ms-apimTemplateParameter.value": "@connectionParameters(\u2018cat\u2019, \u2018\u2019)",
+          "x-ms-apimTemplateParameter.existsAction": "override",
+          "x-ms-apimTemplate-policySection": "Request",
+          "x-ms-apimTemplate-operationName": [
+            "hello"
+          ]
+        }
+      }
+    ],
+    "publisher": "Cale Teeter"
+  }
+}
