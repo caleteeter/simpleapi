@@ -1,15 +1,16 @@
 {
   "properties": {
     "connectionParameters": {
-      "RPCEndpoint": {
+      "rpc_endpoint": {
         "type": "securestring",
         "uiDefinition": {
-          "displayName": "Ethereum RPC Endpoint",
-          "description": "Ethereum RPC Endpoint",
-          "tooltip": "Provide Your Ethereum RPC Endpoint",
+          "displayName": "RPC Endpoint",
+          "description": "Enter the Ethereum RPC Endpoint",
+          "tooltip": "Enter the Ethereum RPC Endpoint",
           "constraints": {
-            "required": "true",
-            "tabIndex": 1
+            "tabIndex": 2,
+            "clearText": false,
+            "required": "true"
           }
         }
       }
@@ -19,10 +20,10 @@
     "policyTemplateInstances": [
       {
         "templateId": "setheader",
-        "title": "Enforce rpc url",
+        "title": "RPC Endpoint",
         "parameters": {
-          "x-ms-apimTemplateParameter.name": "RPC-Endpoint",
-          "x-ms-apimTemplateParameter.value": "@connectionParameters(\u2018cat\u2019, \u2018\u2019)",
+          "x-ms-apimTemplateParameter.name": "rpc_endpoint",
+          "x-ms-apimTemplateParameter.value": "@connectionParameters('rpc_endpoint')",
           "x-ms-apimTemplateParameter.existsAction": "override",
           "x-ms-apimTemplate-policySection": "Request",
           "x-ms-apimTemplate-operationName": [
