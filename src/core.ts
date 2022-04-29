@@ -2,9 +2,11 @@ import { createServer, Request, Response, Next } from 'restify';
 
 function respond(req: Request, res: Response, next: Next) {
     if (req.params.name) {
-        res.send('hello ' + req.params.name);
+        let testData = { 'name': req.params.name }
+        res.send(testData)
     } else {
-        res.send('hello');
+        let testData = { 'name': 'hello' }
+        res.send(testData)
     }
     next();
 }
